@@ -1,0 +1,49 @@
+﻿@model auction.Models.Lot
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Lot</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="name_order" class="control-label"></label>
+                <input asp-for="name_order" class="form-control" />
+                <span asp-validation-for="name_order" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="starting_price" class="control-label"></label>
+                <input asp-for="starting_price" class="form-control" />
+                <span asp-validation-for="starting_price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="buyer_id_buyer" class="control-label"></label>
+                <input asp-for="buyer_id_buyer" class="form-control" />
+                <span asp-validation-for="buyer_id_buyer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="seller_id_seller" class="control-label"></label>
+                <input asp-for="seller_id_seller" class="form-control" />
+                <span asp-validation-for="seller_id_seller" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

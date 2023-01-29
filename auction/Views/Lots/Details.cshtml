@@ -1,0 +1,42 @@
+﻿@model auction.Models.Lot
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Lot</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name_order)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name_order)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.starting_price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.starting_price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.buyer_id_buyer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.buyer_id_buyer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.seller_id_seller)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.seller_id_seller)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
